@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHAN BANDEN SERVICE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .lang-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+    <script>
+        function toggleLanguage(lang) {
+            const nl = document.querySelectorAll('.lang-nl');
+            const en = document.querySelectorAll('.lang-en');
+            nl.forEach(el => el.style.display = lang === 'nl' ? 'block' : 'none');
+            en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+        }
+        window.onload = () => toggleLanguage('nl');
+    </script>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button onclick="toggleLanguage('nl')">Nederlands</button>
+        <button onclick="toggleLanguage('en')">English</button>
+    </div>
+
+    <header>
+        <h1>KHAN BANDEN SERVICE</h1>
+        <p class="lang-nl">Uw betrouwbare partner voor banden en onderhoud</p>
+        <p class="lang-en">Your trusted partner for tyres and maintenance</p>
+    </header>
+    <nav>
+        <a href="#voertuigen">Mijn Voertuigen / My Vehicles</a>
+        <a href="#onderhoud">Onderhoud / Maintenance</a>
+        <a href="#banden">Bandenwissel / Tyre Change</a>
+        <a href="#toevoegen">Toevoegen / Add Vehicle</a>
+        <a href="#filters">Olie & Filters / Oil & Filters</a>
+        <a href="#remmen">Remmen / Brakes</a>
+    </nav>
+
+    <section id="voertuigen">
+        <h2 class="lang-nl">Mijn Voertuigen</h2>
+        <h2 class="lang-en">My Vehicles</h2>
+        <p class="lang-nl">Hier komt een overzicht van uw voertuigen.</p>
+        <p class="lang-en">Here will be an overview of your vehicles.</p>
+    </section>
+
+    <section id="onderhoud">
+        <h2 class="lang-nl">Onderhoudsgeschiedenis</h2>
+        <h2 class="lang-en">Maintenance History</h2>
+        <form>
+            <select>
+                <option selected disabled>Merk / Make</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Volkswagen</option>
+                <option>Opel</option>
+                <option>Ford</option>
+                <option>Peugeot</option>
+                <option>Renault</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Kia</option>
+                <option>Hyundai</option>
+            </select>
+            <input type="text" placeholder="Voertuig / Vehicle (bv. Opel Astra)">
+            <textarea placeholder="Omschrijving / Description"></textarea>
+            <input type="date">
+            <input type="submit" value="Toevoegen / Add">
+        </form>
+    </section>
+
+    <section id="banden">
+        <h2 class="lang-nl">Bandenwissel</h2>
+        <h2 class="lang-en">Tyre Change</h2>
+        <form>
+            <select>
+                <option selected disabled>Merk / Make</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Volkswagen</option>
+                <option>Opel</option>
+                <option>Ford</option>
+                <option>Peugeot</option>
+                <option>Renault</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Kia</option>
+                <option>Hyundai</option>
+            </select>
+            <input type="text" placeholder="Voertuig / Vehicle (bv. BMW 3-serie)">
+            <input type="text" placeholder="Type banden / Tyre Type (bv. Winterbanden)">
+            <input type="date">
+            <input type="submit" value="Log Bandenwissel / Log Tyre Change">
+        </form>
+    </section>
+
+    <section id="toevoegen">
+        <h2 class="lang-nl">Voertuig Toevoegen</h2>
+        <h2 class="lang-en">Add Vehicle</h2>
+        <form>
+            <select>
+                <option selected disabled>Merk / Make</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Volkswagen</option>
+                <option>Opel</option>
+                <option>Ford</option>
+                <option>Peugeot</option>
+                <option>Renault</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Kia</option>
+                <option>Hyundai</option>
+            </select>
+            <input type="text" placeholder="Model">
+            <input type="text" placeholder="Kenteken / License plate">
+            <input type="text" placeholder="Bouwjaar / Year">
+            <input type="submit" value="Toevoegen / Add">
+        </form>
+    </section>
+
+    <section id="filters">
+        <h2 class="lang-nl">Olie & Filters Compatibiliteit</h2>
+        <h2 class="lang-en">Oil & Filter Compatibility</h2>
+        <form>
+            <select>
+                <option selected disabled>Merk / Make</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Volkswagen</option>
+                <option>Opel</option>
+                <option>Ford</option>
+                <option>Peugeot</option>
+                <option>Renault</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Kia</option>
+                <option>Hyundai</option>
+            </select>
+            <input type="text" placeholder="Model">
+            <input type="text" placeholder="Bouwjaar / Year">
+            <input type="submit" value="Bekijk / Check">
+        </form>
+    </section>
+
+    <section id="remmen">
+        <h2 class="lang-nl">Remmen & Remschijven Compatibiliteit</h2>
+        <h2 class="lang-en">Brake & Brake Disc Compatibility</h2>
+        <form>
+            <select>
+                <option selected disabled>Merk / Make</option>
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Volkswagen</option>
+                <option>Opel</option>
+                <option>Ford</option>
+                <option>Peugeot</option>
+                <option>Renault</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Kia</option>
+                <option>Hyundai</option>
+            </select>
+            <input type="text" placeholder="Model">
+            <input type="text" placeholder="Bouwjaar / Year">
+            <input type="submit" value="Bekijk / Check">
+        </form>
+    </section>
+
+    <footer>
+        <p class="lang-nl">Contacteer ons: <strong>0467 01 11 39</strong></p>
+        <p class="lang-en">Contact us: <strong>0467 01 11 39</strong></p>
+    </footer>
+</body>
+</html>
